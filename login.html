@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <nav class="main-nav">
+            <div class="nav-left">
+                <div>
+                    <a href="./index.html">Home</a>
+                </div>
+                <div>
+                    <a href="./about.html">About</a>
+                </div>
+                <div>
+                    <a href="./services.html">Services</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div>
+                    <a href="#">Login</a>
+                </div>
+                <div>
+                    <a href="./register.html">Register</a>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <div class="login-form">
+            <form id="login-form">
+                <div class="form-inputs">
+                    <div>
+                        <label for="login-email">
+                            Email:
+                        </label> <br>
+                        <input type="email" id="login-email" placeholder="Enter Email" required>
+                    </div>
+                    <div>
+                        <label for="login-password">
+                            Password:
+                        </label><br>
+                        <input type="password" id="login-password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="show-password">
+                        <input type="checkbox" onclick="showLoginPassword()"><p>Show Password</p>
+                    </div>
+                    <div>
+                        <input type="submit" value="Login" id="login-button">
+                    </div>
+                    <div>
+                        <p>Not a User? <a class="login-link" href="./register.html">Register</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./login.js"></script>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

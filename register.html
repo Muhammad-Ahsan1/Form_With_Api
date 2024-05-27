@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <nav class="main-nav">
+            <div class="nav-left">
+                <div>
+                    <a href="./index.html">Home</a>
+                </div>
+                <div>
+                    <a href="./about.html">About</a>
+                </div>
+                <div>
+                    <a href="./services.html">Services</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div>
+                    <a href="./login.html">Login</a>
+                </div>
+                <div>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <div class="login-form">
+            <form id="register-form">
+                <div class="form-inputs">
+                    <div>
+                        <label for="register-name">
+                            Name:
+                        </label><br>
+                        <input type="text" id="register-name" placeholder="Enter Name" required>
+                    </div>
+                    <div>
+                        <label for="register-email">
+                            Email:
+                        </label> <br>
+                        <input type="email" id="register-email" placeholder="Enter Email" required>
+                    </div>
+                    <div>
+                        <label for="register-password">
+                            Password:
+                        </label><br>
+                        <input type="password" id="register-password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="show-password">
+                        <input type="checkbox" onclick="showRegisterPassword()"><p>Show Password</p>
+                    </div>
+                    <div>
+                        <input type="submit" value="Register" id="register-button">
+                    </div>
+                    <div>
+                        <p>Already a user?<a class="login-link" href="./login.html">Login</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>
